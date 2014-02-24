@@ -85,5 +85,16 @@ function pagination_($large=false){
 	echo '<ul class="pagination '.$large.' "> <li><a href="#">&laquo;</a></li> <li><a href="#">1</a></li> <li><a href="#">2</a></li> <li><a href="#">3</a></li> <li><a href="#">4</a></li> <li><a href="#">5</a></li> <li><a href="#">&raquo;</a></li> </ul>';
 }
 
+function date_(){
+	$int= mt_rand(1262055681,1262055681);
+	echo date('Y-m-d', strtotime( '+'.mt_rand(0,30).' days'));
+}
+
+function state_(){
+	$state_list = array('Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District Of Columbia','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming');
+	shuffle($state_list);
+	echo $state_list[0];
+}
+
 ?>
 
